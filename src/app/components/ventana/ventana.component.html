@@ -1,0 +1,7 @@
+<button nz-button nzType="primary" (click)="showModal()">
+  <span>Show Modal</span>
+</button>
+<nz-modal class="ventana" [(nzVisible)]="isVisible" nzTitle="Agregar nuevo perro" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()"
+  [nzOkLoading]="isOkLoading">
+  <nz-form-forma>loading</nz-form-forma>
+</nz-modal>

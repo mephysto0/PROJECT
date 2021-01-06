@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormComponent } from './components/form/form.component';
 import { TablaComponent } from './components/tabla/tabla.component';
+import { VentanaComponent} from './components/ventana/ventana.component';
 
 import { NzAffixModule } from 'ng-zorro-antd/affix';
 import { NzAlertModule } from 'ng-zorro-antd/alert';
@@ -80,10 +81,9 @@ import { NzTypographyModule } from 'ng-zorro-antd/typography';
 import { NzUploadModule } from 'ng-zorro-antd/upload';
 import { NzResizableModule } from 'ng-zorro-antd/resizable';
 import { NzPipesModule } from 'ng-zorro-antd/pipes';
-
-import { NZ_ICONS } from 'ng-zorro-antd/icon';
 import { IconDefinition } from '@ant-design/icons-angular';
 import * as AllIcons from '@ant-design/icons-angular/icons';
+
 
 registerLocaleData(es);
 
@@ -98,6 +98,7 @@ const antDesignIcons = AllIcons as {
     AppComponent,
     FormComponent,
     TablaComponent,
+    VentanaComponent,
   ],
   imports: [
     BrowserModule,

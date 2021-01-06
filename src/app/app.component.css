@@ -1,0 +1,22 @@
+.html{
+  min-height: 100%;
+  position: relative;
+}
+.nav{
+  height: 120px;
+}
+
+.footer{
+  background-color: black;
+  position: relative;
+
+  width: 100%;
+  height: 140px;
+  color: white;
+}
+
+.body{
+  margin: 0;
+  margin-bottom: 40px;
+
+}

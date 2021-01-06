@@ -1,0 +1,25 @@
+<form class="forma" nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+  <nz-form-item>
+    <nz-form-label [nzSpan]="5" nzFor="gender" nzRequired>Seleccione la raza del perro</nz-form-label>
+    <nz-select id="gender" formControlName="gender" [(ngModel)]="razaElegida"
+      nzPlaceHolder="Select a option and change input text above" (ngModelChange)="genderChange($event)">
+      <nz-option *ngFor="let p of perros" [nzValue]="p" [nzLabel]="p"></nz-option>
+    </nz-select>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control [nzSpan]="12" nzErrorTip="Sellecione una raza">
+    </nz-form-control>
+    <nz-form-label [nzSpan]="5" nzRequired nzFor="note">Nombre del perro</nz-form-label>
+    <nz-form-control [nzSpan]="12" nzErrorTip="Ingrese nombre del perro">
+      <input id="note" type="text" nz-input formControlName="note" />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control [nzSpan]="12" nzErrorTip="I">
+    </nz-form-control>
+    <nz-form-label [nzSpan]="5" nzRequired nzFor="note">Dueño del perro</nz-form-label>
+    <nz-form-control [nzSpan]="12" nzErrorTip="Ingrese nombre del dueño">
+      <input id="note" type="text" nz-input formControlName="note" />
+    </nz-form-control>
+  </nz-form-item>
+</form>
