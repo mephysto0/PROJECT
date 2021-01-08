@@ -1,8 +1,10 @@
-<app-ventana>loading</app-ventana>
+<app-ventana class="ventana">loading</app-ventana>
 <br />
-<button nz-button (click)="addRow()" nzType="primary">Add</button>
 <br />
-<nz-table id="content" #editRowTable nzBordered [nzData]="listOfData">
+<button class="add" nz-button (click)="addRow()" nzType="primary">Add</button>
+<br />
+<br />
+<nz-table id="content" class="content" #editRowTable nzBordered [nzData]="listOfData">
   <thead>
     <tr>
       <th nzWidth="30%">Raza</th>
@@ -15,19 +17,19 @@
     <tr *ngFor="let data of editRowTable.data" class="editable-row">
       <td>
         <div class="editable-cell" [hidden]="editId === data.id" (click)="startEdit(data.id)">
-          {{ data.name }}
+          {{ data.razaP }}
         </div>
-        <input [hidden]="editId !== data.id" type="text" nz-input [(ngModel)]="data.name" (blur)="stopEdit()" />
+        <input [hidden]="editId !== data.id" type="text" nz-input [(ngModel)]="data.razaP" (blur)="stopEdit()" />
       </td>
-      <td>{{ data.age }}</td>
-      <td>{{ data.address }}</td>
+      <td>{{ data.nPerro }}</td>
+      <td>{{ data.ndueno }}</td>
       <td>
         <a nz-popconfirm nzPopconfirmTitle="Sure to delete?" (nzOnConfirm)="deleteRow(data.id)">Delete</a>
       </td>
     </tr>
+    <br />
 
-
-    <input type="button" value="Download PDF" class="btn btn-success">
 
   </tbody>
   </nz-table>
+ <input type="button" value="Download PDF" class="btn btn-success">

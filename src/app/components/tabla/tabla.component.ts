@@ -1,10 +1,11 @@
+
 import { Component, OnInit, ViewChild } from '@angular/core';
 
 interface ItemData {
   id: string;
-  name: string;
-  age: string;
-  address: string;
+  razaP: string;
+  nPerro: string;
+  ndueno: string;
 }
 
 @Component({
@@ -17,7 +18,10 @@ export class TablaComponent implements OnInit {
 
   i = 0;
   editId: string | null = null;
+
+
   listOfData: ItemData[] = [];
+
 
   startEdit(id: string): void {
     this.editId = id;
@@ -32,9 +36,9 @@ export class TablaComponent implements OnInit {
       ...this.listOfData,
       {
         id: `${this.i}`,
-        name: `Edward King ${this.i}`,
-        age: '32',
-        address: `London, Park Lane no. ${this.i}`
+        razaP: ``,
+        nPerro: '',
+        ndueno: ``
       }
     ];
     this.i++;
@@ -45,8 +49,6 @@ export class TablaComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.addRow();
-    this.addRow();
   }
 
 }
