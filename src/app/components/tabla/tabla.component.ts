@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 interface ItemData {
   id: string;
@@ -14,6 +14,7 @@ interface ItemData {
  styleUrls: ['./tabla.component.css']
 })
 export class TablaComponent implements OnInit {
+
   i = 0;
   editId: string | null = null;
   listOfData: ItemData[] = [];

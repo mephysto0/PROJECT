@@ -1,6 +1,7 @@
 import { RazaService } from './../../service/raza.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Forma } from 'src/app/model/forma.model';
 
 @Component({
   selector: 'nz-form-forma',
@@ -10,8 +11,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class FormComponent implements OnInit {
   validateForm!: FormGroup;
   perros: Array<any> = [];
-
-  razaElegida = 'affenpinscher';
 
   submitForm(): void {
     for (const i in this.validateForm.controls) {
@@ -26,12 +25,20 @@ export class FormComponent implements OnInit {
       .setValue(value === 'male' ? 'Hi, man!' : 'Hi, lady!');
   }
 
+  forma : Forma[] = [];
+
+  perro:String = "";
+  dueno:String = "";
+  razaElegida:String= "affenpinscher"
   constructor(private fb: FormBuilder, private razaService: RazaService) {
+
+
+
+    console.log(this.forma.values);
+
     this.razaService.getRaza().subscribe(
       (resp: any) => {
         this.perros = Object.getOwnPropertyNames(resp['message']);
-
-        console.log(this.perros);
       },
       (error) => console.log(error),
       () => console.log('Complete')
@@ -40,8 +47,9 @@ export class FormComponent implements OnInit {
 
   ngOnInit(): void {
     this.validateForm = this.fb.group({
-      note: [null, [Validators.required]],
-      gender: [null, [Validators.required]],
+      perro: [null, [Validators.required]],
+      dueño: [null, [Validators.required]],
     });
   }
 }
+

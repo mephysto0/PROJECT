@@ -1,8 +1,29 @@
+<form nz-form [formGroup]="validateForm"  action="">
+  <nz-form-item>
+    <nz-form-label>Selecione la raza</nz-form-label>
+    <nz-select  [(ngModel)]="razaElegida" [ngModelOptions]="{standalone: true}">
+      <nz-option *ngFor="let p of perros" [nzValue]="p" [nzLabel]="p"></nz-option>
+    </nz-select>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label>Ingrese el nombre del perro</nz-form-label>
+
+    <input id="perro" type="text" [(ngModel)]="perro" formControlName="perro">
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label>Ingrese el nombre del dueño</nz-form-label>
+    <input id="dueño" type="text" [(ngModel)]="dueno"  formControlName="dueño">
+  </nz-form-item>
+
+</form>
+
+
+<!--
 <form class="forma" nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
   <nz-form-item>
     <nz-form-label [nzSpan]="5" nzFor="gender" nzRequired>Seleccione la raza del perro</nz-form-label>
     <nz-select id="gender" formControlName="gender" [(ngModel)]="razaElegida"
-      nzPlaceHolder="Select a option and change input text above" (ngModelChange)="genderChange($event)">
+      nzPlaceHolder="Select a option" (ngModelChange)="genderChange($event)">
       <nz-option *ngFor="let p of perros" [nzValue]="p" [nzLabel]="p"></nz-option>
     </nz-select>
   </nz-form-item>
@@ -23,3 +44,4 @@
     </nz-form-control>
   </nz-form-item>
 </form>
+-->

@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import * as jspdf from 'jspdf';
+import html2canvas from 'html2canvas';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NZ_I18N, es_ES } from 'ng-zorro-antd/i18n';

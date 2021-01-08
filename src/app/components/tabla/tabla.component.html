@@ -2,12 +2,12 @@
 <br />
 <button nz-button (click)="addRow()" nzType="primary">Add</button>
 <br />
-<nz-table #editRowTable nzBordered [nzData]="listOfData">
+<nz-table id="content" #editRowTable nzBordered [nzData]="listOfData">
   <thead>
     <tr>
-      <th nzWidth="30%">Name</th>
-      <th>Age</th>
-      <th>Address</th>
+      <th nzWidth="30%">Raza</th>
+      <th>Nombre del perro</th>
+      <th>Nombre del dueño</th>
       <th>Action</th>
     </tr>
   </thead>
@@ -26,8 +26,8 @@
       </td>
     </tr>
 
+
+    <input type="button" value="Download PDF" class="btn btn-success">
+
   </tbody>
   </nz-table>
-
-
-<button nz-button nzType="primary"  nzShape="round"><i nz-icon nzType="download"></i>Download</button>

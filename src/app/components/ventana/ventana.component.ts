@@ -24,7 +24,9 @@ export class VentanaComponent implements OnInit {
   handleCancel(): void {
     this.isVisible = false;
   }
-  constructor() {}
+  constructor() {
+
+  }
 
   ngOnInit(): void {}
 }
